@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,700;1,300&display=swap");
+
+.hello {
+  color: red;
+}
+
+html {
+  background-image: url("img/pizza-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+header {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav > ul > li {
+  flex: 1;
+  padding: 3px;
+  margin: 15px;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+ul > li:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+  border-color: #fff;
+}
+
+#content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.header {
+  font-size: 5rem;
+}
+
+.text-content {
+  margin: 3px;
+  font-size: 1.5rem;
+}
