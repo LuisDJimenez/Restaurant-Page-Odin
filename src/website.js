@@ -1,4 +1,5 @@
 import loadHome from "./home";
+import loadMenu from "./menu";
 
 function createHeader() {
   const header = document.createElement("header");
@@ -50,7 +51,7 @@ function setActive(elm) {
 
   li.forEach((li) => {
     if (elm !== li) {
-      elm.classList.remove("active");
+      li.classList.remove("active");
     }
   });
 
