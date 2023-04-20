@@ -81,7 +81,9 @@ function createMain() {
 
 function startWebsite() {
   const content = document.querySelector("#content");
+  const background = document.createElement('div')
 
+  content.appendChild(background)
   content.appendChild(createHeader());
   content.appendChild(createMain());
   setActive(document.querySelector("li"));
