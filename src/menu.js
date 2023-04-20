@@ -1,5 +1,4 @@
 function createMenu(){
-    console.log('its ok')
     const menu = document.createElement('div')
     menu.classList.add('menu')
 
@@ -9,9 +8,6 @@ function createMenu(){
 
     const menuOptions = document.createElement('div')
     menuOptions.classList.add('menu-options')
-
-    const option1 = document.createElement('div')
-    option1.classList.add('option')
 
     menu.appendChild(menuHeader)
     menu.appendChild(menuOptions)
@@ -23,6 +19,7 @@ function createMenu(){
     menuOptions.appendChild(createOption("Pepperoni", "double pepperoni, extra mozzerella, tomatoe sauce, spice, olive oil", '20$'))
     menuOptions.appendChild(createOption("The Chicken One", "chicken, mushrooms, tomatoes, peppers", '30$'))
     return menu
+
 }
 
 function createOption(name, descp, cost){

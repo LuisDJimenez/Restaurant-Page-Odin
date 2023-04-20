@@ -2,6 +2,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Andika:ital,wght@1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@900&display=swap');
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-20dvw);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20dvw);
+  }
+
+  to {
+    transform: translate(0);
+  }
+}
 
 
 html {
@@ -15,25 +36,56 @@ html {
 
 /* Home */
 
+
+.animate-left {
+  animation: slideInLeft 1s ease-out;
+  margin-top: 0 !important;
+}
+
+.animate-rigth{
+  animation: slideInRight 1s ease-out;
+  margin-bottom: 0 !important;
+}
+
 header{
   width: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
+
 
 span{
   color: red;
 }
 
+.phone-img{
+ width: 1.5rem;
+ height: 1.5rem;
+ margin-right: 1rem;
+}
+
 .home{
   display: flex;
   flex-direction: column;
+  
+}
+
+.phone-number {
+ flex: 1;
+ margin-right: 20vh;
+ display: flex;
+ justify-content: flex-end;
+ align-items: center;
+ margin-right: 20vh;
 }
 
 .header {
-  width: 100%;
   font-size: 5rem;
-  font-family: 'Lora', serif;
-  position: relative;
-
+  font-family: 'Londrina Solid', cursive;
+  margin-top: 23.6px;
+  margin-bottom: 23.6px;
+  cursor: default;
+  text-align: center;
 }
 
 
@@ -59,6 +111,10 @@ ul > li:hover {
   border-color: #fff;
 }
 
+.active{
+  border-bottom: 2px solid #fff;
+}
+
 #content {
   display: flex;
   justify-content: center;
@@ -69,10 +125,20 @@ ul > li:hover {
 .text-content {
   margin: 3px;
   font-size: 1.5rem;
-  font-family: 'Andika', sans-serif;
+  font-family: "Roboto", sans-serif;
   width: 100%;
 }
 
+.quote {
+  text-align: end;
+  margin-bottom: 0;
+  margin-top: 3rem;
+}
+
+.quote-author {
+  margin-top: 5px;
+  text-align: end;
+}
 
 /* Menu */
 
@@ -82,13 +148,14 @@ ul > li:hover {
   backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 1rem 8rem;
-  margin-top: 3rem;
+  margin-top: 1rem;
 
 }
 
 .menu-header{
   text-align: center;
   font-family: 'Andika', sans-serif;
+  margin: 0 auto ;
 }
 
 .menu-options {
@@ -96,7 +163,7 @@ ul > li:hover {
   align-items: center;
   width: 100vh;
   flex-direction: column;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .option {
@@ -105,11 +172,12 @@ ul > li:hover {
   grid-template-rows: 0fr 1fr;
   padding: 1rem;
   width: inherit;
-
+  height: 2.5rem;
+  cursor: default;
 }
 
 .option-name{
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .option-desc{
@@ -124,3 +192,19 @@ ul > li:hover {
   align-self: center;
   font-size: 17px;
 }
+
+  /* About */
+
+  .about-container{
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 3rem 2rem;
+    margin: 2rem 15rem 0 15rem;
+    font-size: 20px;
+  }
+
+  p {
+    margin: 15px;
+    font-family: 'Lobster', cursive;
+  }

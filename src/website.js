@@ -1,9 +1,24 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
+import loadAbout from "./about";
+import Icon  from './img/phone-call.png';
+
 
 function createHeader() {
   const header = document.createElement("header");
+  const phone = document.createElement('div')
+  phone.classList.add('phone-number')
+  
+  const myIcon = new Image()
+  myIcon.src = Icon
+  myIcon.classList.add("phone-img")
+  const phoneText = document.createElement('div')
+  phoneText.innerHTML = '(305) 123-4567'
+
+  phone.appendChild(myIcon)
+  phone.appendChild(phoneText)
   header.appendChild(createNav());
+  header.appendChild(phone)
   return header;
 }
 
@@ -29,24 +44,24 @@ function createNav() {
     loadMenu();
   });
 
-  const contact = document.createElement("li");
-  contact.classList.add("nav-li");
-  contact.textContent = "Contact";
-  contact.addEventListener("click", (e) => {
+  const about = document.createElement("li");
+  about.classList.add("nav-li");
+  about.textContent = "About";
+  about.addEventListener("click", (e) => {
     if (e.target.classList.contains("active")) return;
-    setActive(contact);
-    loadContact();
+    setActive(about);
+    loadAbout();
   });
 
   nav.appendChild(ul);
   ul.appendChild(home);
   ul.appendChild(menu);
-  ul.appendChild(contact);
+  ul.appendChild(about);
 
   return nav;
 }
 
-function setActive(elm) {
+export function setActive(elm) {
   const li = document.querySelectorAll(".nav-li");
 
   li.forEach((li) => {
@@ -74,3 +89,5 @@ function startWebsite() {
 }
 
 export default startWebsite;
+
+
