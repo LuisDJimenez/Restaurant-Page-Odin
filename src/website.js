@@ -1,24 +1,23 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
 import loadAbout from "./about";
-import Icon  from './img/phone-call.png';
-
+import Icon from "./img/phone-call.png";
 
 function createHeader() {
   const header = document.createElement("header");
-  const phone = document.createElement('div')
-  phone.classList.add('phone-number')
-  
-  const myIcon = new Image()
-  myIcon.src = Icon
-  myIcon.classList.add("phone-img")
-  const phoneText = document.createElement('div')
-  phoneText.innerHTML = '(305) 123-4567'
+  const phone = document.createElement("div");
+  phone.classList.add("phone-number");
 
-  phone.appendChild(myIcon)
-  phone.appendChild(phoneText)
+  const myIcon = new Image();
+  myIcon.src = Icon;
+  myIcon.classList.add("phone-img");
+  const phoneText = document.createElement("div");
+  phoneText.innerHTML = "(305) 123-4567";
+
+  phone.appendChild(myIcon);
+  phone.appendChild(phoneText);
   header.appendChild(createNav());
-  header.appendChild(phone)
+  header.appendChild(phone);
   return header;
 }
 
@@ -81,9 +80,9 @@ function createMain() {
 
 function startWebsite() {
   const content = document.querySelector("#content");
-  const background = document.createElement('div')
+  const background = document.createElement("div");
 
-  content.appendChild(background)
+  content.appendChild(background);
   content.appendChild(createHeader());
   content.appendChild(createMain());
   setActive(document.querySelector("li"));
@@ -91,5 +90,3 @@ function startWebsite() {
 }
 
 export default startWebsite;
-
-
